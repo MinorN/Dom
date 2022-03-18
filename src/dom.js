@@ -81,5 +81,16 @@ window.dom = {
             return node.classList.contains(className)
         }
     },
+    on(node,eventName,fn){
+        node.addEventListener(eventName,fn)
+    },
+    off(node,eventName,fn){
+        node.removeEventListener(eventName,fn)
+    },
+    // 查
+    find(selector){
+        return document.querySelectorAll(selector)
+    },
+
 }
 

@@ -73,3 +73,16 @@ dom.class.remove(node,className)
 // 是否含有className,返回布尔值
 dom.class.has(node,className)
 ```
+### 增加、删除事件监听
+```js
+// 增加事件监听
+dom.on(node,eventName,fn)
+// 删除事件监听
+dom.off(node,eventName,fn)
+```
+## 查
+### 获取标签(们)
+```js
+dom.find(selector)
+// 返回一个数组
+```

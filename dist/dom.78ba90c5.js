@@ -191,6 +191,17 @@ window.dom = {
         has: function has(node, className) {
             return node.classList.contains(className);
         }
+    },
+    on: function on(node, eventName, fn) {
+        node.addEventListener(eventName, fn);
+    },
+    off: function off(node, eventName, fn) {
+        node.removeEventListener(eventName, fn);
+    },
+
+    // 查
+    find: function find(selector) {
+        return document.querySelectorAll(selector);
     }
 };
 },{}],"C:\\Users\\Admin\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
