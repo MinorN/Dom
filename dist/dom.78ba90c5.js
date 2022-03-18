@@ -105,6 +105,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"dom.js":[function(require,module,exports) {
 window.dom = {
+    // 增
     create: function create(string) {
         var container = document.createElement('template');
         container.innerHTML = string.trim();
@@ -122,6 +123,22 @@ window.dom = {
     wrap: function wrap(node, parent) {
         dom.before(node, parent);
         dom.append(parent, node);
+    },
+
+    // 删
+    remove: function remove(node) {
+        node.parentNode.removeChild(node);
+        return node;
+    },
+    empty: function empty(node) {
+        var childNodes = node.childNodes.childNodes;
+
+        var array = [];
+        for (var i = 0; i < childNodes.length; i++) {
+            dom.remove(childNodes[i]);
+            array.push(childNodes[i]);
+        }
+        return array;
     }
 };
 },{}],"C:\\Users\\Admin\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
