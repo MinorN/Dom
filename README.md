@@ -64,3 +64,12 @@ dom.style(node,name,value)
 // 当传入三个参数，且后两个属性为字符串时，表示写入style属性，例如：dom.style(div,'color','red')
 // 当第二个参数为Object时，表示写入style属性，例如：dom.style(div,{color:‘red’})
 ```
+### 增加、修改、删除class
+```js
+// 增加class
+dom.class.add(node,className)
+// 删除class
+dom.class.remove(node,className)
+// 是否含有className,返回布尔值
+dom.class.has(node,className)
+```

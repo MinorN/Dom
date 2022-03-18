@@ -179,6 +179,18 @@ window.dom = {
                 }
             }
         }
+    },
+
+    class: {
+        add: function add(node, className) {
+            node.classList.add(className);
+        },
+        remove: function remove(node, className) {
+            node.classList.remove(className);
+        },
+        has: function has(node, className) {
+            return node.classList.contains(className);
+        }
     }
 };
 },{}],"C:\\Users\\Admin\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
