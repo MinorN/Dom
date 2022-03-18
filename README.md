@@ -56,3 +56,11 @@ dom.html(node,string)
 // 当选中是表示写入html
 // 当没选中时，表示读html
 ```
+### 修改style
+```js
+dom.style(node,name,value)
+// 其中node为必选项
+// 当总共传入两个参数时，表示读取style属性，例如：dom.style(div,'color')
+// 当传入三个参数，且后两个属性为字符串时，表示写入style属性，例如：dom.style(div,'color','red')
+// 当第二个参数为Object时，表示写入style属性，例如：dom.style(div,{color:‘red’})
+```

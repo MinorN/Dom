@@ -164,6 +164,21 @@ window.dom = {
         } else if (arguments.length === 1) {
             return node.innerHTML;
         }
+    },
+    style: function style(node, name, value) {
+        if (arguments.length === 3) {
+            //dom.style(div,'color','red')
+            node.style[name] = value;
+        } else if (arguments.length === 2) {
+            if (typeof name === "string") {
+                //dom.style(div,'color')
+                return node.style[name];
+            } else if (name instanceof Object) {
+                for (var key in name) {
+                    node.style[key] = name[key];
+                }
+            }
+        }
     }
 };
 },{}],"C:\\Users\\Admin\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
