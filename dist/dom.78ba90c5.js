@@ -118,6 +118,10 @@ window.dom = {
     },
     append: function append(parent, node) {
         parent.appendChild(node);
+    },
+    wrap: function wrap(node, parent) {
+        dom.before(node, parent);
+        dom.append(parent, node);
     }
 };
 },{}],"C:\\Users\\Admin\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {

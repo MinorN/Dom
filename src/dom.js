@@ -12,6 +12,10 @@ window.dom = {
     },
     append(parent,node){
         parent.appendChild(node)
+    },
+    wrap(node,parent){
+        dom.before(node,parent)
+        dom.append(parent,node)
     }
 }
 
