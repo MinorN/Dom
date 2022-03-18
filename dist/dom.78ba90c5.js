@@ -134,9 +134,11 @@ window.dom = {
         var childNodes = node.childNodes.childNodes;
 
         var array = [];
-        for (var i = 0; i < childNodes.length; i++) {
-            dom.remove(childNodes[i]);
-            array.push(childNodes[i]);
+        var firstChild = node.firstChild;
+
+        while (firstChild) {
+            array.push(dom.remove(node.firstChild));
+            firstChild = node.firstChild;
         }
         return array;
     }

@@ -26,11 +26,14 @@ window.dom = {
     empty(node){
         const {childNodes} = node.childNodes
         const array = []
-        for(let i = 0;i<childNodes.length;i++){
-            dom.remove(childNodes[i])
-            array.push(childNodes[i])
+        let {firstChild} = node
+        while ((firstChild)){
+            array.push(dom.remove(node.firstChild))
+            firstChild = node.firstChild
         }
         return array
-    }
+    },
+    // 改
+
 }
 
