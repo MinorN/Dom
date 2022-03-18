@@ -10,5 +10,8 @@ window.dom = {
     before(node,node2){
         node.parentNode.insertBefore(node2,node)
     },
+    append(parent,node){
+        parent.appendChild(node)
+    }
 }
 
