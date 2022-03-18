@@ -34,3 +34,25 @@ dom.remove(node)
 dom.empty(node)
 // 同时你能得到被删除节点的一个数组
 ```
+## 修改节点
+### 读写属性
+```js
+don.attr(node,name,value)
+// 其中 value 是可选的
+// 当选中 value 时，表示想写入内容
+// 当没选中 value 时，会返回 node 中为 name 的值
+```
+### 读写文本内容
+```js
+dom.text(node,string)
+// string 是可选的
+// 当选中是表示写入文本内容
+// 当没选中时，表示读文本内容
+```
+### 读写html
+```js
+dom.html(node,string)
+// string 是可选的
+// 当选中是表示写入html
+// 当没选中时，表示读html
+```
