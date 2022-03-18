@@ -109,6 +109,9 @@ window.dom = {
         var container = document.createElement('template');
         container.innerHTML = string.trim();
         return container.content.firstChild;
+    },
+    after: function after(node, node2) {
+        node.parentNode.insertBefore(node2, node.nextSibling);
     }
 };
 },{}],"C:\\Users\\Admin\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {

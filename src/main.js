@@ -1,2 +1,4 @@
-const div = dom.create('<tr><td>1</td></tr>')
+const div = dom.create('<div>newDiv</div>')
 console.log(div);
+
+dom.after(test,div)
