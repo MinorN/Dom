@@ -83,6 +83,36 @@ dom.off(node,eventName,fn)
 ## 查
 ### 获取标签(们)
 ```js
-dom.find(selector)
+dom.find(selector,scpoe)
+// 第二个参数可选，表示查找范围
 // 返回一个数组
+```
+### 获取父节点
+```js
+dom.parent(node)
+```
+### 获取子节点
+```js
+dom.children(node)
+```
+### 获取兄弟节点
+```js
+dom.siblings(node)
+// 返回的是一个数组
+```
+### 获取下一个节点
+```js
+dom.next(node)
+```
+### 获取上一个节点
+```js
+dom.previous(node)
+```
+### 遍历所有节点
+```js
+dom.each(nodeList,fn)
+```
+### 获取排行老几
+```js
+dom.index(node)
 ```
